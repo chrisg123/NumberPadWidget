@@ -16,12 +16,15 @@ class NumberPadWidget(QWidget):
         self.setFixedSize(size)
         self.setStyleSheet(inspect.cleandoc(
         """\
+        QPushButton {
         font:Segoe UI;
         background-color:white;
         border: %dpx solid black;
         font-size: %dpx;
         padding:5px;
         font-weight:bold;
+        }
+        QPushButton:pressed {background-color: red }
         """ % (border_size,font_size)))
 
         self._on_click = lambda _: None
